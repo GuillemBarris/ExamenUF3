@@ -1,3 +1,4 @@
+import { HttpClient, } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,13 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ExamenUF3';
-pagination: any;
-}
-const artwork = require('https://api.artic.edu/api/v1/artworks');
-const artist = require('https://api.artic.edu/api/v1/artists');
-
-artwork.getArtwork = function () {
-  return artwork.id;
-;
-
+  constructor(private httpClient: HttpClient) { }
+ public getID(){
+  
+  return this.httpClient.get("https://api.artic.edu/api/v1/artworks");
+ }
 }
