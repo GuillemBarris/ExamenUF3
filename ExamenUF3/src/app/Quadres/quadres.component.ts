@@ -7,14 +7,18 @@ import { AppComponent } from '../app.component';
   styleUrls: ['./quadres.component.css']
 })
 export class QuadresComponent implements OnInit {
- Quadres: any;
+ Quadres!: any;
+
+  
   constructor(private appComponent: AppComponent){}
   ngOnInit() {
     this.appComponent.getID().subscribe((data)=>{
     
       this.Quadres = data;
-      console.log(this.Quadres.data[0].id);
+      console.log(this.Quadres);
+   
     });
+    
   }
   
 }

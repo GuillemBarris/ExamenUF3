@@ -1,5 +1,11 @@
-<div *ngFor="let Quadre of Quadres">
-    <h3>Hola</h3>
-    <span>{{this.Quadre.data[0].id}}</span>
+<span>
+<p>Object</p>
+<div *ngFor="let Quadre of Quadres | keyvalue">
+   {{Quadres.data[1].title}}
+   {{Quadres.data[1].id}}
 
- 
+
+   
+  
+</div>
+
